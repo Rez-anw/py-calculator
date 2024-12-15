@@ -29,4 +29,3 @@ def calculator():
 
 calculator()
 
-print("Thanks")
