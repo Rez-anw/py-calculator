@@ -28,3 +28,5 @@ def calculator():
     print("Division: ", round(divide(num1, num2), 2))
 
 calculator()
+
+print("Thanks")
