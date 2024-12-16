@@ -36,14 +36,18 @@ def calculator2():
     numbers = []
 
     while True:
-        user_input = input("Enter an number or 'add': ").strip()    # Removes leading or trailing whitespace characters
+        user_input = input("Enter an number or 'add', or 'exit' to end the program: ").strip()    # Removes leading or trailing whitespace characters
 
         if user_input.lower() == "add":   # This ensures both upper and lower cases or mix of two is accepted
             if numbers:
                 print(f" The sum of the numbers is: {sum(numbers)}")
+                print()
                 numbers.clear()
             else:
                 print("No numbers to add")
+        elif user_input.lower() in {"exit", "end"}:
+            print("Program ended. Goodbye")
+            break
         else:
             try:
                 number = float(user_input)
@@ -54,5 +58,7 @@ def calculator2():
                 print("Invalid input. Please enter a number or 'add'.")
 
 calculator2()
+
+
 
 
